@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <title>Social Media Icons</title>
+     <style>
+          body {
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               justify-content: center;
+               background-color: black;
+               height: 100vh;
+               margin: 0;
+               font-family: Arial, sans-serif;
+          }
+
+          .btn {
+               width: 9em;
+               height: 3em;
+               border-radius: 3em;
+               font-family: inherit;
+               cursor: pointer;
+               border: none;
+               position: relative;
+               overflow: hidden;
+               font-size: 15px;
+               z-index: 1;
+               box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.2);
+               margin-bottom: 2rem;
+          }
+
+          .btn::before {
+               content: '';
+               width: 0;
+               height: 3em;
+               border-radius: 30em;
+               position: absolute;
+               top: 0;
+               left: 0;
+               background-image: linear-gradient(to right, rgb(64, 255, 64), rgb(77, 77, 255), rgb(255, 60, 60), rgb(255, 255, 97));
+               transition: 0.5s ease;
+               display: block;
+               z-index: -1;
+          }
+
+          .btn:hover::before {
+               width: 9em;
+          }
+
+          .btn:active {
+               color: rgb(31, 15, 15);
+          }
+
+          .icons {
+               display: flex;
+               gap: 20px;
+               flex-wrap: wrap;
+               justify-content: center;
+               max-width: 600px;
+          }
+
+          .icons a {
+               text-decoration: none;
+          }
+
+          .icons a .layer {
+               width: 55px;
+               height: 55px;
+               transition: transform 0.3s;
+               position: relative;
+          }
+
+          .icons a:hover .layer {
+               transform: rotate(-35deg) skew(20deg);
+          }
+
+          .icons a .layer span {
+               position: absolute;
+               top: 0;
+               left: 0;
+               height: 100%;
+               width: 100%;
+               border: 1px solid #3498db;
+               border-radius: 5px;
+               transition: all 0.3s;
+          }
+
+          .icons a .layer span.fab,
+          .icons a .layer span.fas {
+               font-size: 30px;
+               line-height: 55px;
+               text-align: center;
+               color: #fff;
+          }
+
+          .icons a:hover .layer span:nth-child(1) {
+               opacity: 0.2;
+               background-color: whitesmoke;
+          }
+
+          .icons a:hover .layer span:nth-child(2) {
+               opacity: 0.4;
+               transform: translate(5px, -5px);
+
+          }
+
+          .icons a:hover .layer span:nth-child(3) {
+               opacity: 0.6;
+               transform: translate(10px, -10px);
+
+          }
+
+          .icons a:hover .layer span:nth-child(4) {
+               opacity: 0.8;
+               transform: translate(15px, -15px);
+
+          }
+
+          .text {
+               color: white;
+               text-align: center;
+               margin-top: 10px;
+               font-size: 12px;
+          }
+     </style>
+</head>
+
+<body>
+     <button class="btn">Click Me</button>
+     <div class="icons">
+          <a href="#">
+               <div class="layer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fab fa-facebook-f"></span>
+               </div>
+               <div class="text">Facebook</div>
+          </a>
+          <a href="#">
+               <div class="layer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fab fa-instagram"></span>
+               </div>
+               <div class="text">Instagram</div>
+          </a>
+          <a href="#">
+               <div class="layer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fab fa-github"></span>
+               </div>
+               <div class="text">GitHub</div>
+          </a>
+          <a href="#">
+               <div class="layer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fab fa-linkedin-in"></span>
+               </div>
+               <div class="text">LinkedIn</div>
+          </a>
+          <a href="#">
+               <div class="layer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fab fa-youtube"></span>
+               </div>
+               <div class="text">YouTube</div>
+          </a>
+     </div>
+</body>
+
+</html>
